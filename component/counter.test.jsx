@@ -2,6 +2,7 @@ import Counter from "./counter";
 import Foo from "./foo";
 import { shallow, configure } from 'enzyme';
 import React from 'react';
+import renderer from 'react-test-renderer';
 
 
 describe("Counter", () => {
@@ -18,5 +19,10 @@ describe("Counter", () => {
     container.find("button").simulate("click");
 
     expect(container.find("Foo").length).toBe(1);
+  });
+
+  it('matches the initial snapshot', () => {
+    const component = renderer.create(<Counter/>);
+    expect(component.toJSON()).toMatchSnapshot();
   });
 });
