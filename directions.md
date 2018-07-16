@@ -24,3 +24,4 @@ container.find(Foo) to see the amount of Foo
 .simulate to simulate click
 
 install react-test-renderer to check for "snapshots"
+getInstance to get component functions/state

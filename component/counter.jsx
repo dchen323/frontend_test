@@ -20,7 +20,7 @@ class Counter extends Component {
 
   makeFoo() {
     const returnArr = [];
-    for (let i = 0; i < this.sate.count; i++) {
+    for (let i = 0; i < this.state.count; i++) {
       returnArr.push(<Foo key={i}/>);
     }
     return returnArr;
@@ -30,7 +30,8 @@ class Counter extends Component {
     return(
       <div>
         <p>count: {this.state.count}</p>
-        <button onClick={this.add1}>Add One</button>
+        <button className="add1" onClick={this.add1}>Add One</button>
+        {this.makeFoo()}
       </div>
     );
   }
