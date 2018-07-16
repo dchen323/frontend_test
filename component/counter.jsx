@@ -1,4 +1,5 @@
 import React, {Component} from 'react';
+import Foo from './foo';
 
 class Counter extends Component {
   constructor(props){
@@ -15,6 +16,14 @@ class Counter extends Component {
         count: state.count + 1
       };
     });
+  }
+
+  makeFoo() {
+    const returnArr = [];
+    for (let i = 0; i < this.sate.count; i++) {
+      returnArr.push(<Foo key={i}/>);
+    }
+    return returnArr;
   }
 
   render() {

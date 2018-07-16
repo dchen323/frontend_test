@@ -2,8 +2,7 @@ npm init --y
 npm install -jest
 write tests
 create .babelrc file to allow for es6 syntax
-add env and install npm-install babel-preset-env
-import, export default
+add env and npm-install babel-preset-env
 
 use toEqual for testing objects
 
@@ -18,3 +17,8 @@ add "test_watch": "jest --watch" to watch for changes in package json
 
 create configure.enzyme.js file
 create jest.config.js file in root
+
+create Foo, file
+container.find(Foo) to see the amount of Foo
+
+.simulate to simulate click
